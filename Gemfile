@@ -24,6 +24,8 @@ gem 'turbolinks', '~> 5'
 # Users & Authentication
 gem "devise"
 gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
 
 # API
 gem 'jbuilder', '~> 2.5'
