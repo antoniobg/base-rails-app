@@ -29,11 +29,12 @@ gem "omniauth"
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
-  gem 'pry', platform: :mri
-  gem 'pry-byebug', platform: :mri
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do
+  gem "letter_opener"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
