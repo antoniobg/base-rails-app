@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
-ruby '2.4.0'
-gem 'rails', '~> 5.0.1'
+source "https://rubygems.org"
+ruby "2.4.0"
+gem "rails", "~> 5.0.1"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -8,18 +8,16 @@ git_source(:github) do |repo_name|
 end
 
 # Database
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
+gem "pg"
 
 # Server
-gem 'puma', '~> 3.0'
+gem "puma", "~> 3.0"
 
 # Assets
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
+gem "sass-rails", "~> 5.0"
+gem "uglifier", ">= 1.3.0"
+gem "jquery-rails"
+gem "turbolinks", "~> 5"
 
 # Users & Authentication
 gem "devise"
@@ -28,17 +26,18 @@ gem "omniauth-facebook"
 gem "omniauth-twitter"
 
 # API
-gem 'jbuilder', '~> 2.5'
+gem "jbuilder", "~> 2.5"
 
 group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug'
+  gem "pry"
+  gem "pry-byebug"
+  gem "dotenv-rails"
 end
 
 group :development do
   gem "letter_opener"
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "web-console", ">= 3.3.0"
+  gem "listen", "~> 3.0.5"
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
 end
