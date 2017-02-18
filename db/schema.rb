@@ -10,11 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218074110) do
+ActiveRecord::Schema.define(version: 20170218075404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
+
+  create_table "identities", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["provider"], name: "index_identities_on_provider", using: :btree
+    t.index ["uid"], name: "index_identities_on_uid", using: :btree
+    t.index ["user_id"], name: "index_identities_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.citext   "email",                               null: false
@@ -37,4 +48,5 @@ ActiveRecord::Schema.define(version: 20170218074110) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "identities", "users"
 end
