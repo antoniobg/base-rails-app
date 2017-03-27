@@ -25,6 +25,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 
 # API
 gem "jbuilder", "~> 2.5"
