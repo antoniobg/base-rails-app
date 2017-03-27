@@ -2,7 +2,7 @@ class CreateIdentityProviderEnum < ActiveRecord::Migration[5.0]
   ENUM_NAME = 'oauth_provider'.freeze
   IDENTITY_PROVIDERS = %w(
     facebook
-    google
+    google_oauth2
     twitter
     github
     linkedin

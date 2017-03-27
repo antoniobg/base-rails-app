@@ -45,7 +45,7 @@ SET search_path = public, pg_catalog;
 
 CREATE TYPE oauth_provider AS ENUM (
     'facebook',
-    'google',
+    'google_oauth2',
     'twitter',
     'github',
     'linkedin',
