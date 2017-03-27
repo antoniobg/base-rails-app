@@ -1,7 +1,6 @@
 module Users::Identities
   class CreateByOauth < ApplicationService
     def call(oauth)
-      binding.pry
       Identity.create!(
         uid: oauth.uid,
         provider: oauth.provider,
